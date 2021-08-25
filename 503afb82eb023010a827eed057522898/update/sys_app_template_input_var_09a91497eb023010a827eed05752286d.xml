@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app_template_input_var">
+    <sys_app_template_input_var action="INSERT_OR_UPDATE">
+        <default/>
+        <description/>
+        <flow_input_variable display_value="spoke_selection">32a91497eb023010a827eed0575228b6</flow_input_variable>
+        <mandatory>false</mandatory>
+        <name>spoke_selection</name>
+        <sys_class_name>sys_app_template_input_var</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-23 13:49:53</sys_created_on>
+        <sys_id>09a91497eb023010a827eed05752286d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>spoke_selection</sys_name>
+        <sys_package display_value="FT - Cloud Storage" source="sn_ft_cloud_storag">503afb82eb023010a827eed057522898</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_update_name>sys_app_template_input_var_09a91497eb023010a827eed05752286d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 13:49:53</sys_updated_on>
+        <template display_value="Cloud Storage">4e4f8c13eb023010a827eed057522862</template>
+        <type>string</type>
+    </sys_app_template_input_var>
+</record_update>

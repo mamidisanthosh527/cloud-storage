@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app_template_input_var">
+    <sys_app_template_input_var action="INSERT_OR_UPDATE">
+        <default/>
+        <description/>
+        <flow_input_variable display_value="flow_scope_sys_id">1e99d097eb023010a827eed057522849</flow_input_variable>
+        <mandatory>false</mandatory>
+        <name>flow_scope_sys_id</name>
+        <sys_class_name>sys_app_template_input_var</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-23 13:49:34</sys_created_on>
+        <sys_id>aa899097eb023010a827eed0575228f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>flow_scope_sys_id</sys_name>
+        <sys_package display_value="FT - Cloud Storage" source="sn_ft_cloud_storag">503afb82eb023010a827eed057522898</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_update_name>sys_app_template_input_var_aa899097eb023010a827eed0575228f2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 13:49:34</sys_updated_on>
+        <template display_value="Cloud Storage">4e4f8c13eb023010a827eed057522862</template>
+        <type>string</type>
+    </sys_app_template_input_var>
+</record_update>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_lib_component">
+    <sys_ux_lib_component action="INSERT_OR_UPDATE">
+        <default_children/>
+        <default_layout/>
+        <deprecated>false</deprecated>
+        <overrides/>
+        <required_sys_props/>
+        <required_translation_keys/>
+        <source_script/>
+        <source_script_name/>
+        <sys_class_name>sys_ux_lib_component</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-24 05:38:24</sys_created_on>
+        <sys_id>f7b23717eb023010a827eed05752281d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sn-cloud-storage-wizard</sys_name>
+        <sys_package display_value="FT - Cloud Storage" source="sn_ft_cloud_storag">503afb82eb023010a827eed057522898</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_update_name>sys_ux_lib_component_f7b23717eb023010a827eed05752281d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-24 05:38:24</sys_updated_on>
+        <tag>sn-cloud-storage-wizard</tag>
+    </sys_ux_lib_component>
+</record_update>

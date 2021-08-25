@@ -1,0 +1,2518 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>create_bucket_for_oracle_object_storage_management_from_service_catalog</internal_name>
+        <label_cache>[{"name":"83204570-82cb-4ace-9512-3083bc33e8fd.state","label":"20➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"3f4cc32d-5927-4c70-8d35-d3de956c2bff.table_name","label":"23➛Requested Item Table","reference":"sc_req_item","reference_display":"Requested Item Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3f4cc32d-5927-4c70-8d35-d3de956c2bff.record","label":"23➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"fcc16676-4ffe-4049-b740-0eaaa521a709.table_name","label":"21➛Requested Item Table","reference":"sc_req_item","reference_display":"Requested Item Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"fcc16676-4ffe-4049-b740-0eaaa521a709.record","label":"21➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a0c9cd97-ccdf-4629-80db-b1814dddf73d.table_name","label":"19➛Catalog Task Table","reference":"sc_task","reference_display":"Catalog Task Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a0c9cd97-ccdf-4629-80db-b1814dddf73d.record","label":"19➛Catalog Task Record","reference":"sc_task","reference_display":"Catalog Task Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a259ee20-6f50-403a-b4bf-32151ec9cc0e.table_name","label":"17➛Requested Item Table","reference":"sc_req_item","reference_display":"Requested Item Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a259ee20-6f50-403a-b4bf-32151ec9cc0e.record","label":"17➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d834a026-c92c-44ab-9901-42a24b4203c4.state","label":"16➛State","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"flow_variable.assign_to_group_if_automation_fails","label":"Flow Variables➛Assign to group if automation fails","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"59e66ed8-65f3-4414-82e4-e4c2d5ed1e0e"}},{"name":"flow_variable.assign_to_person_if_automation_fails","label":"Flow Variables➛Assign to Person if automation fails","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1fbd7067-ac5f-4f98-be61-af9497f83089"}},{"name":"6a536139-458d-4159-809e-ae674afe7827.table_name","label":"15➛Catalog Task Table","reference":"sc_task","reference_display":"Catalog Task Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6a536139-458d-4159-809e-ae674afe7827.record","label":"15➛Catalog Task Record","reference":"sc_task","reference_display":"Catalog Task Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6be45b40-76d0-47be-9978-2291f364aa4d.table_name","label":"13➛Requested Item Table","reference":"sc_req_item","reference_display":"Requested Item Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6be45b40-76d0-47be-9978-2291f364aa4d.record","label":"13➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"87f2c80f-7cb1-4764-965f-4f243c773b33.table_name","label":"12➛Catalog Task Table","reference":"sc_task","reference_display":"Catalog Task Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"87f2c80f-7cb1-4764-965f-4f243c773b33.record","label":"12➛Catalog Task Record","reference":"sc_task","reference_display":"Catalog Task Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7dc6507f-fe6a-4bf0-8ffa-e1bc95eb2cb4.id","label":"10➛ID","reference_display":"ID","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"5f4385d7-2a25-4cc1-b2df-62deadef4b1d"}},{"name":"7dc6507f-fe6a-4bf0-8ffa-e1bc95eb2cb4.error_message","label":"10➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"d917bb5b-3905-4f32-a8af-abafe5409ea4"}},{"name":"7dc6507f-fe6a-4bf0-8ffa-e1bc95eb2cb4.status","label":"10➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"8c0868f2-a24d-47b1-93a0-a63727ed1ef0"}},{"name":"flow_variable.name","label":"Flow Variables➛Name","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1b0c6fc5-173d-4a34-85a0-3d2e3ad48d20"}},{"name":"5c75eac9-42e4-4871-9fee-730abdcdd00f.record","label":"3➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"5c75eac9-42e4-4871-9fee-730abdcdd00f.table_name","label":"3➛Requested Item Table","reference":"sc_req_item","reference_display":"Requested Item Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Service Catalog_1.request_item","label":"Trigger➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"default_search_field":"number"}},{"name":"fe2dc2eb-3d23-42af-86ee-284f3b7a093a.approval_state","label":"4➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.approver","label":"Flow Variables➛Approver","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"28749fad-a932-4318-9ca1-77f5e7ba2dc8"}},{"name":"738901fc-f0a1-4c6f-8975-7b6a71e095e0.state","label":"5➛State","reference_display":"State","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"acdbf749-aad5-45b2-8308-138f4fb22640.Catalog Task","label":"7➛Catalog Task","reference":"sc_task","reference_display":"Catalog Task","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"0a762a2e-fa25-41ea-bda3-20e8bbb2e641.status","label":"8➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b957da93-3874-4ed7-bec2-caae278e47bf"}},{"name":"0a762a2e-fa25-41ea-bda3-20e8bbb2e641.error_message","label":"8➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"a00b2bc2-c46d-468c-bc72-9024410cfc7e"}},{"name":"0a762a2e-fa25-41ea-bda3-20e8bbb2e641.output","label":"8➛Output","reference_display":"Output","type":"json","base_type":"json","attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f4b23fc2-473e-48c7-810b-fd230f539a4a"}},{"name":"0a762a2e-fa25-41ea-bda3-20e8bbb2e641.bucket_list","label":"8➛Bucket List","reference_display":"Bucket List","type":"array.object","base_type":"array.object","attributes":{"sourceId":"f2957660-eed7-4315-8625-dce331f32dd3","child_name":"Bucket","uiUniqueId":"a540dde1-965a-43b0-81a5-7cdbd1093b80","uiTypeLabel":"Array.Object","co_type_name":"FD1408b573851020104d1b89f38e3b113a","child_label":"Bucket","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"699a19d4-6226-4015-b573-525dee8580a6","uiType":"array.object","child_type":"object","child_uiUniqueId":"722b8951-9aba-40d4-a352-96ddad8fdd82"}},{"name":"flow_variable.tenancy_id","label":"Flow Variables➛Tenancy ID","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"d1a1645c-de17-4108-b10c-3547b0aeef5d"}},{"name":"flow_variable.compartment_id","label":"Flow Variables➛Compartment ID","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"c3675564-5a51-4b73-aaf0-ddbde9691dc0"}},{"name":"flow_variable.namespace","label":"Flow Variables➛Namespace","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"4c9faf31-0507-4d21-9978-bb8a915b2bd2"}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>Create Bucket for Oracle Object Storage Management from Service Catalog</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:11:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5a2db706eb023010a827eed05752288b</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Create Bucket for Oracle Object Storage Management from Service Catalog</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="FT - Cloud Storage" source="sn_ft_cloud_storag">503afb82eb023010a827eed057522898</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_update_name>sys_hub_flow_5a2db706eb023010a827eed05752288b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=5a2db706eb023010a827eed05752288b"/>
+    <sys_variable_value action="delete_multiple" query="document_key=5a2db706eb023010a827eed05752288b"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=5a2db706eb023010a827eed05752288b^sys_idNOT INa45eff06eb023010a827eed0575228b7"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <name>Service Catalog</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:16:29</sys_created_on>
+        <sys_id>a45eff06eb023010a827eed0575228b7</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:19</sys_updated_on>
+        <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>service_catalog</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a45eff06eb023010a827eed0575228b7"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=5a2db706eb023010a827eed05752288b^sys_idNOT IN1e2db706eb023010a827eed05752288e"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>5a2db706eb023010a827eed05752288b</id>
+        <name>Create Bucket for Oracle Object Storage Management from Service Catalog</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:11:24</sys_created_on>
+        <sys_id>1e2db706eb023010a827eed05752288e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:11:24</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=5a2db706eb023010a827eed05752288b^sys_idNOT IN605eff06eb023010a827eed0575228a6,e45eff06eb023010a827eed0575228ae"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</model>
+        <model_id>5a2db706eb023010a827eed05752288b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_5a2db706eb023010a827eed05752288b</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:16:28</sys_created_on>
+        <sys_id>605eff06eb023010a827eed0575228a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:16:28</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>sc_req_item</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</model>
+        <model_id>5a2db706eb023010a827eed05752288b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_5a2db706eb023010a827eed05752288b</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:16:29</sys_created_on>
+        <sys_id>e45eff06eb023010a827eed0575228ae</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:16:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=5a2db706eb023010a827eed05752288b^sys_idNOT IN0c4f3b46eb023010a827eed0575228a4,12ddacd2eb023010a827eed05752280a,16dd6cd2eb023010a827eed0575228ef,1add6cd2eb023010a827eed0575228da,46dd6cd2eb023010a827eed0575228cf,52ddacd2eb023010a827eed057522812,5add6cd2eb023010a827eed0575228f5,733f3b46eb023010a827eed057522898,785eff06eb023010a827eed0575228f7,9add6cd2eb023010a827eed0575228fd,c1798852eb423010a827eed057522813,d2ddacd2eb023010a827eed057522804,d6dd6cd2eb023010a827eed0575228e0,dadd6cd2eb023010a827eed0575228e8,f05eff06eb023010a827eed0575228ed,f73f3b46eb023010a827eed05752288f"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Catalog Task">af51fd0e73141300612c273ffff6a785</action_type>
+        <action_type_parent/>
+        <comment>Create task for the automation.</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <order>7</order>
+        <parent_ui_id>24a9cf5f-033e-4f4b-8ae6-f901245cdaa8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>0c4f3b46eb023010a827eed0575228a4</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>acdbf749-aad5-45b2-8308-138f4fb22640</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0c4f3b46eb023010a827eed0575228a4"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>0c4f3b46eb023010a827eed0575228a4</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>4c4f3b46eb023010a827eed0575228a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <value>state=2</value>
+        <variable display_value="Fields">7751fd0e73141300612c273ffff6a7ac</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>0c4f3b46eb023010a827eed0575228a4</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>884f3b46eb023010a827eed0575228a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Wait">f751fd0e73141300612c273ffff6a7b2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>0c4f3b46eb023010a827eed0575228a4</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>c44f3b46eb023010a827eed0575228a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <value>Create Bucket for Oracle Object strage.</value>
+        <variable display_value="Short Description">3751fd0e73141300612c273ffff6a7a6</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=0c4f3b46eb023010a827eed0575228a4"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_fields</field>
+        <id>0c4f3b46eb023010a827eed0575228a4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>444f3b46eb023010a827eed0575228a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_af51fd0e73141300612c273ffff6a785</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_requested_item</field>
+        <id>0c4f3b46eb023010a827eed0575228a4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>cc4f3b46eb023010a827eed0575228a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_af51fd0e73141300612c273ffff6a785</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_short_description</field>
+        <id>0c4f3b46eb023010a827eed0575228a4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>0c4f3b46eb023010a827eed0575228a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_af51fd0e73141300612c273ffff6a785</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_wait</field>
+        <id>0c4f3b46eb023010a827eed0575228a4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>804f3b46eb023010a827eed0575228a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_af51fd0e73141300612c273ffff6a785</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment>Close Requested Item when Task is complete.</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <order>21</order>
+        <parent_ui_id>7cb4ed07-dc21-4a01-97e1-94173036f98a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>12ddacd2eb023010a827eed05752280a</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>fcc16676-4ffe-4049-b740-0eaaa521a709</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=12ddacd2eb023010a827eed05752280a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>12ddacd2eb023010a827eed05752280a</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>5addacd2eb023010a827eed05752280b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <value>sc_req_item</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=12ddacd2eb023010a827eed05752280a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>12ddacd2eb023010a827eed05752280a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>16ddacd2eb023010a827eed05752280b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>12ddacd2eb023010a827eed05752280a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>52ddacd2eb023010a827eed05752280b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>12ddacd2eb023010a827eed05752280a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>d6ddacd2eb023010a827eed05752280b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>state={{83204570-82cb-4ace-9512-3083bc33e8fd.state}}^work_notes=Automation to create new bucket {{flow_variable.name}} failed. Due to bucket already exits. Please create a bucket with new name.</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Wait For Condition">89ce8a4187120010663ca1bb36cb0be3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <order>16</order>
+        <parent_ui_id>73a28b17-dfc4-4757-9e9d-4354daf20f94</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>16dd6cd2eb023010a827eed0575228ef</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>d834a026-c92c-44ab-9901-42a24b4203c4</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=16dd6cd2eb023010a827eed0575228ef"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>16dd6cd2eb023010a827eed0575228ef</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>1edd6cd2eb023010a827eed0575228f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <value>sc_task</value>
+        <variable display_value="Table">45ce8a4187120010663ca1bb36cb0bea</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>16dd6cd2eb023010a827eed0575228ef</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>5add6cd2eb023010a827eed0575228f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <value>state=3^ORstate=4^ORstate=7</value>
+        <variable display_value="Conditions">49ce8a4187120010663ca1bb36cb0bef</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=16dd6cd2eb023010a827eed0575228ef"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>16dd6cd2eb023010a827eed0575228ef</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>16dd6cd2eb023010a827eed0575228f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_89ce8a4187120010663ca1bb36cb0be3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>16dd6cd2eb023010a827eed0575228ef</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>52dd6cd2eb023010a827eed0575228f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_89ce8a4187120010663ca1bb36cb0be3</table>
+        <value>{{6a536139-458d-4159-809e-ae674afe7827.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>16dd6cd2eb023010a827eed0575228ef</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>d6dd6cd2eb023010a827eed0575228f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_89ce8a4187120010663ca1bb36cb0be3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment>Close Catalog Task.</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <order>12</order>
+        <parent_ui_id>b7734dc4-b33e-4050-a442-a71dce74fb5f</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>1add6cd2eb023010a827eed0575228da</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>87f2c80f-7cb1-4764-965f-4f243c773b33</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1add6cd2eb023010a827eed0575228da"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>1add6cd2eb023010a827eed0575228da</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>9add6cd2eb023010a827eed0575228dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <value>sc_task</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>1add6cd2eb023010a827eed0575228da</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>d6dd6cd2eb023010a827eed0575228dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <value>state=3^work_notes=Bucket created successfully.</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=1add6cd2eb023010a827eed0575228da"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>1add6cd2eb023010a827eed0575228da</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>92dd6cd2eb023010a827eed0575228dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{acdbf749-aad5-45b2-8308-138f4fb22640.Catalog Task}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>1add6cd2eb023010a827eed0575228da</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>dedd6cd2eb023010a827eed0575228db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>1add6cd2eb023010a827eed0575228da</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>56dd6cd2eb023010a827eed0575228dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Bucket">cee7d866875310108d4c4b3de8cb0b6b</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <order>10</order>
+        <parent_ui_id>c7c37885-9c4d-41b0-9051-e8429599b34b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>46dd6cd2eb023010a827eed0575228cf</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>7dc6507f-fe6a-4bf0-8ffa-e1bc95eb2cb4</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=46dd6cd2eb023010a827eed0575228cf"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>46dd6cd2eb023010a827eed0575228cf</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>46dd6cd2eb023010a827eed0575228d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <value>{"complexObject":{"name$":"FD8f5ebfa3cd102010d82c7a15f7fdc65c","$COCollectionField":[{"Value":{"$cv":{"$c":"java.lang.String","$v":""}},"Name":{"$cv":{"$c":"java.lang.String","$v":""}}}]},"complexObjectSchema":{"FlowDesigner:FD8f5ebfa3cd102010d82c7a15f7fdc65c":{"$COCollectionField":[{"Tag":{"Value":"String","Value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Value\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\"}"},"Name":"String","Name.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Name\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Free-form Tags\",\"mandatory\":\"false\",\"child_name\":\"Tag\",\"uiUniqueId\":\"d753149f-d8e4-4977-9f08-68c233ecd2d2\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD8f5ebfa3cd102010d82c7a15f7fdc65c\",\"child_label\":\"Tag\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"7\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"2ff01037-1b26-44bd-b14c-c6b76b2febaf\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD8f5ebfa3cd102010d82c7a15f7fdc65c.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Free-form Tags\",\"mandatory\":\"false\",\"child_name\":\"Tag\",\"uiUniqueId\":\"d753149f-d8e4-4977-9f08-68c233ecd2d2\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD8f5ebfa3cd102010d82c7a15f7fdc65c\",\"child_label\":\"Tag\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"7\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"2ff01037-1b26-44bd-b14c-c6b76b2febaf\"}"}},"serializationFormat":"JSON","version":"1.0"}</value>
+        <variable display_value="Free-form Tags">5ee7d866875310108d4c4b3de8cb0bc6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>46dd6cd2eb023010a827eed0575228cf</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>82dd6cd2eb023010a827eed0575228d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <value>{"complexObject":{"name$":"FD835ebfa39c1020109c2ec60eeb3aeb5b","$COCollectionField":[{"Value":{"$cv":{"$c":"java.lang.String","$v":""}},"Name":{"$cv":{"$c":"java.lang.String","$v":""}}}]},"complexObjectSchema":{"FlowDesigner:FD835ebfa39c1020109c2ec60eeb3aeb5b":{"$COCollectionField":[{"Metadata":{"Value":"String","Value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Value\",\"mandatory\":\"true\",\"order\":\"2\",\"max_length\":\"0\"}"},"Name":"String","Name.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Name\",\"mandatory\":\"true\",\"order\":\"1\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Metadata\",\"mandatory\":\"false\",\"child_name\":\"Metadata\",\"uiUniqueId\":\"9966c472-ab81-460b-83a5-693322716a01\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD835ebfa39c1020109c2ec60eeb3aeb5b\",\"child_label\":\"Metadata\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"6\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"5c2eb352-6b22-4e98-8a56-06da19f1a604\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD835ebfa39c1020109c2ec60eeb3aeb5b.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Metadata\",\"mandatory\":\"false\",\"child_name\":\"Metadata\",\"uiUniqueId\":\"9966c472-ab81-460b-83a5-693322716a01\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD835ebfa39c1020109c2ec60eeb3aeb5b\",\"child_label\":\"Metadata\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"6\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"5c2eb352-6b22-4e98-8a56-06da19f1a604\"}"}},"serializationFormat":"JSON","version":"1.0"}</value>
+        <variable display_value="Metadata">02e7d866875310108d4c4b3de8cb0bc1</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=46dd6cd2eb023010a827eed0575228cf"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>compartment_id</field>
+        <id>46dd6cd2eb023010a827eed0575228cf</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>c6dd6cd2eb023010a827eed0575228d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_cee7d866875310108d4c4b3de8cb0b6b</table>
+        <value>{{flow_variable.compartment_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>freeform_tags</field>
+        <id>46dd6cd2eb023010a827eed0575228cf</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>8add6cd2eb023010a827eed0575228d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_cee7d866875310108d4c4b3de8cb0b6b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>metadata</field>
+        <id>46dd6cd2eb023010a827eed0575228cf</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>42dd6cd2eb023010a827eed0575228d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_cee7d866875310108d4c4b3de8cb0b6b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>name</field>
+        <id>46dd6cd2eb023010a827eed0575228cf</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>06dd6cd2eb023010a827eed0575228d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_cee7d866875310108d4c4b3de8cb0b6b</table>
+        <value>{{flow_variable.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>namespace_name</field>
+        <id>46dd6cd2eb023010a827eed0575228cf</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>4edd6cd2eb023010a827eed0575228d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_cee7d866875310108d4c4b3de8cb0b6b</table>
+        <value>{{flow_variable.namespace}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>tenancy_id</field>
+        <id>46dd6cd2eb023010a827eed0575228cf</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>02dd6cd2eb023010a827eed0575228d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_cee7d866875310108d4c4b3de8cb0b6b</table>
+        <value>{{flow_variable.tenancy_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment>Close Requested Item.</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <order>23</order>
+        <parent_ui_id>b26f20bb-58d9-4859-9169-49847de6f1c3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:09</sys_created_on>
+        <sys_id>52ddacd2eb023010a827eed057522812</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>3f4cc32d-5927-4c70-8d35-d3de956c2bff</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=52ddacd2eb023010a827eed057522812"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>52ddacd2eb023010a827eed057522812</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:09</sys_created_on>
+        <sys_id>5eddacd2eb023010a827eed057522813</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:09</sys_updated_on>
+        <value>sc_req_item</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>52ddacd2eb023010a827eed057522812</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:09</sys_created_on>
+        <sys_id>9addacd2eb023010a827eed057522813</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:09</sys_updated_on>
+        <value>state=3^work_notes=Request for creating the Bucket was not approved. Please contact the help desk for further assistance if needed.</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=52ddacd2eb023010a827eed057522812"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>52ddacd2eb023010a827eed057522812</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:09</sys_created_on>
+        <sys_id>56ddacd2eb023010a827eed057522813</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:09</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>52ddacd2eb023010a827eed057522812</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:09</sys_created_on>
+        <sys_id>92ddacd2eb023010a827eed057522813</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:09</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>52ddacd2eb023010a827eed057522812</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:09</sys_created_on>
+        <sys_id>1addacd2eb023010a827eed057522813</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:09</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment>Close Requested Item when Task is complete.</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <order>17</order>
+        <parent_ui_id>73a28b17-dfc4-4757-9e9d-4354daf20f94</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>5add6cd2eb023010a827eed0575228f5</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>a259ee20-6f50-403a-b4bf-32151ec9cc0e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5add6cd2eb023010a827eed0575228f5"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5add6cd2eb023010a827eed0575228f5</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>92dd6cd2eb023010a827eed0575228f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <value>sc_req_item</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=5add6cd2eb023010a827eed0575228f5"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>5add6cd2eb023010a827eed0575228f5</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>5edd6cd2eb023010a827eed0575228f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>5add6cd2eb023010a827eed0575228f5</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>9add6cd2eb023010a827eed0575228f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>5add6cd2eb023010a827eed0575228f5</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>12dd6cd2eb023010a827eed0575228f7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>state={{d834a026-c92c-44ab-9901-42a24b4203c4.state}}^work_notes=Automation to create this Bucket failed with error message: {{7dc6507f-fe6a-4bf0-8ffa-e1bc95eb2cb4.error_message}}. Please manually create the Bucket and close this Task.</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Wait For Condition">89ce8a4187120010663ca1bb36cb0be3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <order>5</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>733f3b46eb023010a827eed057522898</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>738901fc-f0a1-4c6f-8975-7b6a71e095e0</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=733f3b46eb023010a827eed057522898"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>733f3b46eb023010a827eed057522898</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>bb3f3b46eb023010a827eed05752289a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <value>sc_req_item</value>
+        <variable display_value="Table">45ce8a4187120010663ca1bb36cb0bea</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>733f3b46eb023010a827eed057522898</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>f73f3b46eb023010a827eed05752289a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <value>approval=approved^ORapproval=rejected</value>
+        <variable display_value="Conditions">49ce8a4187120010663ca1bb36cb0bef</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=733f3b46eb023010a827eed057522898"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>733f3b46eb023010a827eed057522898</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>b33f3b46eb023010a827eed05752289a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_89ce8a4187120010663ca1bb36cb0be3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>733f3b46eb023010a827eed057522898</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>ff3f3b46eb023010a827eed057522899</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_89ce8a4187120010663ca1bb36cb0be3</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>733f3b46eb023010a827eed057522898</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>773f3b46eb023010a827eed05752289a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_89ce8a4187120010663ca1bb36cb0be3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment>Set State to Work in Progress</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:16:30</sys_created_on>
+        <sys_id>785eff06eb023010a827eed0575228f7</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>5c75eac9-42e4-4871-9fee-730abdcdd00f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=785eff06eb023010a827eed0575228f7"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>785eff06eb023010a827eed0575228f7</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>3b3f3b46eb023010a827eed05752288a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <value>sc_req_item</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>785eff06eb023010a827eed0575228f7</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>ff3f3b46eb023010a827eed057522889</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <value>state=2</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=785eff06eb023010a827eed0575228f7"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>785eff06eb023010a827eed0575228f7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>bb3f3b46eb023010a827eed057522889</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>785eff06eb023010a827eed0575228f7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>f73f3b46eb023010a827eed057522889</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>785eff06eb023010a827eed0575228f7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>7f3f3b46eb023010a827eed057522889</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment>If automation fails, reassign to user or group defined in Flow Variables.</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <order>19</order>
+        <parent_ui_id>7cb4ed07-dc21-4a01-97e1-94173036f98a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>9add6cd2eb023010a827eed0575228fd</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>a0c9cd97-ccdf-4629-80db-b1814dddf73d</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9add6cd2eb023010a827eed0575228fd"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9add6cd2eb023010a827eed0575228fd</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>d2dd6cd2eb023010a827eed0575228ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <value>sc_task</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=9add6cd2eb023010a827eed0575228fd"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>9add6cd2eb023010a827eed0575228fd</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>9edd6cd2eb023010a827eed0575228fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{acdbf749-aad5-45b2-8308-138f4fb22640.Catalog Task}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>9add6cd2eb023010a827eed0575228fd</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>dadd6cd2eb023010a827eed0575228fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>9add6cd2eb023010a827eed0575228fd</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>52dd6cd2eb023010a827eed0575228ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>assigned_to={{flow_variable.assign_to_person_if_automation_fails}}^assignment_group={{flow_variable.assign_to_person_if_automation_fails}}^work_notes=Automation to create new bucket {{flow_variable.name}} failed. Due to bucket already exits. Please create a bucket with new name.</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look up Buckets">d992140b871310108d4c4b3de8cb0bb0</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <order>8</order>
+        <parent_ui_id>24a9cf5f-033e-4f4b-8ae6-f901245cdaa8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 10:05:07</sys_created_on>
+        <sys_id>c1798852eb423010a827eed057522813</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>0a762a2e-fa25-41ea-bda3-20e8bbb2e641</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c1798852eb423010a827eed057522813"/>
+    <sys_element_mapping action="delete_multiple" query="id=c1798852eb423010a827eed057522813"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>compartment_id</field>
+        <id>c1798852eb423010a827eed057522813</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 10:05:07</sys_created_on>
+        <sys_id>81798852eb423010a827eed057522815</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 10:05:07</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d992140b871310108d4c4b3de8cb0bb0</table>
+        <value>{{flow_variable.compartment_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>namespace</field>
+        <id>c1798852eb423010a827eed057522813</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 10:05:07</sys_created_on>
+        <sys_id>cd798852eb423010a827eed057522814</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 10:05:07</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d992140b871310108d4c4b3de8cb0bb0</table>
+        <value>{{flow_variable.namespace}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>tenancy_id</field>
+        <id>c1798852eb423010a827eed057522813</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 10:05:07</sys_created_on>
+        <sys_id>45798852eb423010a827eed057522815</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 10:05:07</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d992140b871310108d4c4b3de8cb0bb0</table>
+        <value>{{flow_variable.tenancy_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Wait For Condition">89ce8a4187120010663ca1bb36cb0be3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <order>20</order>
+        <parent_ui_id>7cb4ed07-dc21-4a01-97e1-94173036f98a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>d2ddacd2eb023010a827eed057522804</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>83204570-82cb-4ace-9512-3083bc33e8fd</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d2ddacd2eb023010a827eed057522804"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d2ddacd2eb023010a827eed057522804</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>56ddacd2eb023010a827eed057522806</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <value>sc_task</value>
+        <variable display_value="Table">45ce8a4187120010663ca1bb36cb0bea</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d2ddacd2eb023010a827eed057522804</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>92ddacd2eb023010a827eed057522806</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <value>stateIN3,4,7</value>
+        <variable display_value="Conditions">49ce8a4187120010663ca1bb36cb0bef</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d2ddacd2eb023010a827eed057522804"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>d2ddacd2eb023010a827eed057522804</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>5eddacd2eb023010a827eed057522805</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_89ce8a4187120010663ca1bb36cb0be3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>d2ddacd2eb023010a827eed057522804</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>9addacd2eb023010a827eed057522805</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_89ce8a4187120010663ca1bb36cb0be3</table>
+        <value>{{a0c9cd97-ccdf-4629-80db-b1814dddf73d.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>d2ddacd2eb023010a827eed057522804</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>12ddacd2eb023010a827eed057522806</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_89ce8a4187120010663ca1bb36cb0be3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment>Close Requested Item.</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <order>13</order>
+        <parent_ui_id>b7734dc4-b33e-4050-a442-a71dce74fb5f</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>d6dd6cd2eb023010a827eed0575228e0</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>6be45b40-76d0-47be-9978-2291f364aa4d</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d6dd6cd2eb023010a827eed0575228e0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d6dd6cd2eb023010a827eed0575228e0</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>12dd6cd2eb023010a827eed0575228e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <value>state=3^work_notes=Bucket created successfully.</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d6dd6cd2eb023010a827eed0575228e0</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>d2dd6cd2eb023010a827eed0575228e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <value>sc_req_item</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d6dd6cd2eb023010a827eed0575228e0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>d6dd6cd2eb023010a827eed0575228e0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>dadd6cd2eb023010a827eed0575228e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>d6dd6cd2eb023010a827eed0575228e0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>1add6cd2eb023010a827eed0575228e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>d6dd6cd2eb023010a827eed0575228e0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>9edd6cd2eb023010a827eed0575228e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment>If automation fails, reassign to user or group defined in Flow Variables.</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <order>15</order>
+        <parent_ui_id>73a28b17-dfc4-4757-9e9d-4354daf20f94</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>dadd6cd2eb023010a827eed0575228e8</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>6a536139-458d-4159-809e-ae674afe7827</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=dadd6cd2eb023010a827eed0575228e8"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>dadd6cd2eb023010a827eed0575228e8</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>16dd6cd2eb023010a827eed0575228ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <value>sc_task</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=dadd6cd2eb023010a827eed0575228e8"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>dadd6cd2eb023010a827eed0575228e8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>dedd6cd2eb023010a827eed0575228e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{acdbf749-aad5-45b2-8308-138f4fb22640.Catalog Task}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>dadd6cd2eb023010a827eed0575228e8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>1edd6cd2eb023010a827eed0575228e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>dadd6cd2eb023010a827eed0575228e8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>92dd6cd2eb023010a827eed0575228ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>assigned_to={{flow_variable.assign_to_person_if_automation_fails}}^assignment_group={{flow_variable.assign_to_group_if_automation_fails}}^work_notes=Automation to create this Bucket failed with error message: {{7dc6507f-fe6a-4bf0-8ffa-e1bc95eb2cb4.error_message}}. Please manually create the Bucket and close this Task.</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:16:29</sys_created_on>
+        <sys_id>f05eff06eb023010a827eed0575228ed</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:19</sys_updated_on>
+        <ui_id>fba76ee4-a294-4d5c-bb29-56bd917e81c5</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=f05eff06eb023010a827eed0575228ed"/>
+    <sys_element_mapping action="delete_multiple" query="id=f05eff06eb023010a827eed0575228ed"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>requested_item</field>
+        <id>f05eff06eb023010a827eed0575228ed</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:16:29</sys_created_on>
+        <sys_id>745eff06eb023010a827eed0575228ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:16:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent/>
+        <comment>You can change the approver in the catalog variables or directly in the action.</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>f73f3b46eb023010a827eed05752288f</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>fe2dc2eb-3d23-42af-86ee-284f3b7a093a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=f73f3b46eb023010a827eed05752288f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f73f3b46eb023010a827eed05752288f</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>3f3f3b46eb023010a827eed057522892</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <value/>
+        <variable display_value="Due Date">c5f2e9920b10030085c083eb37673af9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f73f3b46eb023010a827eed05752288f</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>7b3f3b46eb023010a827eed057522892</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="Journal Field">c1f2e9920b10030085c083eb37673ae3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f73f3b46eb023010a827eed05752288f</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>b73f3b46eb023010a827eed057522892</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="Approval Field">01f2e9920b10030085c083eb37673ad8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f73f3b46eb023010a827eed05752288f</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>ff3f3b46eb023010a827eed057522892</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <value>sc_req_item</value>
+        <variable display_value="Table">bcf2e9920b10030085c083eb37673acc</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=f73f3b46eb023010a827eed05752288f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>f73f3b46eb023010a827eed05752288f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>733f3b46eb023010a827eed057522892</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>ApprovesAnyU[{{flow_variable.approver}}]OrRejectsAnyU[{{flow_variable.approver}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_field</field>
+        <id>f73f3b46eb023010a827eed05752288f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>773f3b46eb023010a827eed057522891</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>f73f3b46eb023010a827eed05752288f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>bf3f3b46eb023010a827eed057522891</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>journal_field</field>
+        <id>f73f3b46eb023010a827eed05752288f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>3b3f3b46eb023010a827eed057522891</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>f73f3b46eb023010a827eed05752288f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>fb3f3b46eb023010a827eed057522891</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>f73f3b46eb023010a827eed05752288f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>373f3b46eb023010a827eed057522892</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=5a2db706eb023010a827eed05752288b^sys_idNOT IN02dd6cd2eb023010a827eed0575228b6,12ddacd2eb023010a827eed05752280c,5add6cd2eb023010a827eed0575228f7,785eff06eb023010a827eed0575228f0,8edd6cd2eb023010a827eed0575228d3,9add6cd2eb023010a827eed0575228e2,f33f3b46eb023010a827eed05752289b"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">4add6cd2eb023010a827eed0575228b5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>24a9cf5f-033e-4f4b-8ae6-f901245cdaa8</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>02dd6cd2eb023010a827eed0575228b6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>c7c37885-9c4d-41b0-9051-e8429599b34b</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=02dd6cd2eb023010a827eed0575228b6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>02dd6cd2eb023010a827eed0575228b6</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>42dd6cd2eb023010a827eed0575228ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <value>check if bucket name is already exits</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=02dd6cd2eb023010a827eed0575228b6"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>02dd6cd2eb023010a827eed0575228b6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>cedd6cd2eb023010a827eed0575228b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{0a762a2e-fa25-41ea-bda3-20e8bbb2e641.output}}NOT LIKE{{flow_variable.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>02dd6cd2eb023010a827eed0575228b6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>86dd6cd2eb023010a827eed0575228b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">5eddacd2eb023010a827eed05752280b</block>
+        <comment/>
+        <connected_to>24a9cf5f-033e-4f4b-8ae6-f901245cdaa8</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>22</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>12ddacd2eb023010a827eed05752280c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>b26f20bb-58d9-4859-9169-49847de6f1c3</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=12ddacd2eb023010a827eed05752280c"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">96dd6cd2eb023010a827eed0575228f7</block>
+        <comment/>
+        <connected_to>c7c37885-9c4d-41b0-9051-e8429599b34b</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>18</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>24a9cf5f-033e-4f4b-8ae6-f901245cdaa8</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>5add6cd2eb023010a827eed0575228f7</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>7cb4ed07-dc21-4a01-97e1-94173036f98a</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=5add6cd2eb023010a827eed0575228f7"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">305eff06eb023010a827eed0575228f0</block>
+        <comment>Map Catalog Variables or enter a value for any undefined variable in this action. All variables after "Assign to" are optional. Only one "Assign to" variable is required.</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <flow_variable/>
+        <flow_variables_assigned>approver,assign_to_group_if_automation_fails,name,namespace,compartment_id,assign_to_person_if_automation_fails,tenancy_id</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:16:29</sys_created_on>
+        <sys_id>785eff06eb023010a827eed0575228f0</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>13b27bd3-06d9-444c-a42c-5ae4467067da</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=785eff06eb023010a827eed0575228f0"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">cadd6cd2eb023010a827eed0575228d3</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>11</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>c7c37885-9c4d-41b0-9051-e8429599b34b</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>8edd6cd2eb023010a827eed0575228d3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>b7734dc4-b33e-4050-a442-a71dce74fb5f</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=8edd6cd2eb023010a827eed0575228d3"/>
+    <sys_element_mapping action="delete_multiple" query="id=8edd6cd2eb023010a827eed0575228d3"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>8edd6cd2eb023010a827eed0575228d3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>8edd6cd2eb023010a827eed0575228d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 12:44:08</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{7dc6507f-fe6a-4bf0-8ffa-e1bc95eb2cb4.status}}=Success</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">d6dd6cd2eb023010a827eed0575228e2</block>
+        <comment/>
+        <connected_to>b7734dc4-b33e-4050-a442-a71dce74fb5f</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>14</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>c7c37885-9c4d-41b0-9051-e8429599b34b</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 12:44:08</sys_created_on>
+        <sys_id>9add6cd2eb023010a827eed0575228e2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>73a28b17-dfc4-4757-9e9d-4354daf20f94</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=9add6cd2eb023010a827eed0575228e2"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">333f3b46eb023010a827eed05752289b</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>f33f3b46eb023010a827eed05752289b</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-23 06:08:20</sys_updated_on>
+        <ui_id>24a9cf5f-033e-4f4b-8ae6-f901245cdaa8</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=f33f3b46eb023010a827eed05752289b"/>
+    <sys_element_mapping action="delete_multiple" query="id=f33f3b46eb023010a827eed05752289b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>f33f3b46eb023010a827eed05752289b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:20:32</sys_created_on>
+        <sys_id>bb3f3b46eb023010a827eed05752289e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:20:32</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{fe2dc2eb-3d23-42af-86ee-284f3b7a093a.approval_state}}=approved</value>
+    </sys_element_mapping>
+    <sys_hub_flow_variable action="delete_multiple" query="model=5a2db706eb023010a827eed05752288b^sys_idNOT IN245eff06eb023010a827eed0575228b9,a05eff06eb023010a827eed0575228c3,a05eff06eb023010a827eed0575228c8,a85eff06eb023010a827eed0575228be,a85eff06eb023010a827eed0575228cc,b05eff06eb023010a827eed0575228d1,bc5eff06eb023010a827eed0575228d5"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=d1a1645c-de17-4108-b10c-3547b0aeef5d</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>tenancy_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Tenancy ID</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</model>
+        <model_id>5a2db706eb023010a827eed05752288b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_5a2db706eb023010a827eed05752288b</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:16:29</sys_created_on>
+        <sys_id>245eff06eb023010a827eed0575228b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Tenancy ID</sys_name>
+        <sys_package display_value="FT - Cloud Storage" source="sn_ft_cloud_storag">503afb82eb023010a827eed057522898</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_245eff06eb023010a827eed0575228b9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:16:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=28749fad-a932-4318-9ca1-77f5e7ba2dc8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>approver</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Approver</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</model>
+        <model_id>5a2db706eb023010a827eed05752288b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_5a2db706eb023010a827eed05752288b</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:16:29</sys_created_on>
+        <sys_id>a05eff06eb023010a827eed0575228c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Approver</sys_name>
+        <sys_package display_value="FT - Cloud Storage" source="sn_ft_cloud_storag">503afb82eb023010a827eed057522898</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_a05eff06eb023010a827eed0575228c3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:16:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=4c9faf31-0507-4d21-9978-bb8a915b2bd2</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>namespace</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Namespace</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</model>
+        <model_id>5a2db706eb023010a827eed05752288b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_5a2db706eb023010a827eed05752288b</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:16:29</sys_created_on>
+        <sys_id>a05eff06eb023010a827eed0575228c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Namespace</sys_name>
+        <sys_package display_value="FT - Cloud Storage" source="sn_ft_cloud_storag">503afb82eb023010a827eed057522898</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_a05eff06eb023010a827eed0575228c8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:16:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=1b0c6fc5-173d-4a34-85a0-3d2e3ad48d20</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Name</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</model>
+        <model_id>5a2db706eb023010a827eed05752288b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_5a2db706eb023010a827eed05752288b</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:16:29</sys_created_on>
+        <sys_id>a85eff06eb023010a827eed0575228be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Name</sys_name>
+        <sys_package display_value="FT - Cloud Storage" source="sn_ft_cloud_storag">503afb82eb023010a827eed057522898</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_a85eff06eb023010a827eed0575228be</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:16:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=c3675564-5a51-4b73-aaf0-ddbde9691dc0</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>compartment_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Compartment ID</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</model>
+        <model_id>5a2db706eb023010a827eed05752288b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_5a2db706eb023010a827eed05752288b</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:16:29</sys_created_on>
+        <sys_id>a85eff06eb023010a827eed0575228cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Compartment ID</sys_name>
+        <sys_package display_value="FT - Cloud Storage" source="sn_ft_cloud_storag">503afb82eb023010a827eed057522898</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_a85eff06eb023010a827eed0575228cc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:16:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=1fbd7067-ac5f-4f98-be61-af9497f83089</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>assign_to_person_if_automation_fails</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Assign to Person if automation fails</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</model>
+        <model_id>5a2db706eb023010a827eed05752288b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_5a2db706eb023010a827eed05752288b</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:16:29</sys_created_on>
+        <sys_id>b05eff06eb023010a827eed0575228d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Assign to Person if automation fails</sys_name>
+        <sys_package display_value="FT - Cloud Storage" source="sn_ft_cloud_storag">503afb82eb023010a827eed057522898</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_b05eff06eb023010a827eed0575228d1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:16:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=59e66ed8-65f3-4414-82e4-e4c2d5ed1e0e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>assign_to_group_if_automation_fails</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Assign to group if automation fails</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Create Bucket for Oracle Object Storage Management from Service Catalog">5a2db706eb023010a827eed05752288b</model>
+        <model_id>5a2db706eb023010a827eed05752288b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_5a2db706eb023010a827eed05752288b</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_user_group">sys_user_group</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:16:29</sys_created_on>
+        <sys_id>bc5eff06eb023010a827eed0575228d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Assign to group if automation fails</sys_name>
+        <sys_package display_value="FT - Cloud Storage" source="sn_ft_cloud_storag">503afb82eb023010a827eed057522898</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_bc5eff06eb023010a827eed0575228d5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:16:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_5a2db706eb023010a827eed05752288b^sys_idNOT INe85eff06eb023010a827eed0575228b4,ec5eff06eb023010a827eed0575228ac"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5a2db706eb023010a827eed05752288b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:16:29</sys_created_on>
+        <sys_id>e85eff06eb023010a827eed0575228b4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="FT - Cloud Storage" source="sn_ft_cloud_storag">503afb82eb023010a827eed057522898</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:16:29</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>request_item</element>
+        <help/>
+        <hint/>
+        <label>Request Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5a2db706eb023010a827eed05752288b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-20 09:16:29</sys_created_on>
+        <sys_id>ec5eff06eb023010a827eed0575228ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="FT - Cloud Storage" source="sn_ft_cloud_storag">503afb82eb023010a827eed057522898</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="FT - Cloud Storage">503afb82eb023010a827eed057522898</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-20 09:16:29</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+</record_update>
